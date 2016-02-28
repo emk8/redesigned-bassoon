@@ -1,13 +1,13 @@
-package aaron;
+package connect4;
 
-import java.awt.*;
-import javax.swing.*;
+/**
+ * Object used to represent game pieces
+ */
 
-public class GamePiece extends JPanel{
-	private int team;
-	private int xPoint, yPoint;
-	private final int OVAL_SIZE = 75;
-	
+public class GamePiece{
+	private int team;  //team piece is controlled by ( 1= human, 2= AI)
+	private int xPoint, yPoint; //location of piece
+
 	GamePiece(){
 		team = 1;
 		xPoint = 0;
@@ -19,19 +19,35 @@ public class GamePiece extends JPanel{
 		this.xPoint = xPoint;
 		this.yPoint = yPoint;
 	}
-		
+
+	/**
+	 * Gets x coordinate of piece
+ 	 * @return X coordinate
+     */
 	public int getXCoordinate(){
 		return xPoint;
 	}
-	
+
+	/**
+	 * Gets y coordinate of piece
+	 * @return Y coordinate
+     */
 	public int getYCoordinate(){
 		return yPoint;
 	}
-	
+
+	/**
+	 * Set team of piece
+	 * @param newTeam The new team of piece
+     */
 	public void setTeam(int newTeam){
 		team = newTeam;
 	}
-	
+
+	/**
+	 * Get team of piece
+	 * @return The team the piece is controlled by
+     */
 	public int getTeam(){
 		return team;
 	}
